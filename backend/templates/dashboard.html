@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Room Dashboard 🏠</title>
+    <script src="/static/dashboard.js" defer></script>
+</head>
+<body>
+    <h1>Smart Room Dashboard 🏠</h1>
+    <div>
+        <h2>Data from ESP</h2>
+        <p><strong>Light Level (LDR):</strong> <span id="ldr">-</span></p>
+        <p><strong>Presence Detected (Button):</strong> <span id="button">-</span></p>
+    </div>
+    <div>
+        <h2>Data from flet frontend</h2>
+        <p><strong>Analog Output:</strong></p>
+        <p><span id="analog_output">-</span></p>
+    </div>
+    <!-- <p><strong>Light Level (LDR):</strong> <span id="ldr">-</span></p>
+    <p><strong>Presence Detected (Button):</strong> <span id="button">-</span></p>
+    <p><strong>Analog Output:</strong> <span id="analog_output">-</span></p> -->
+
+    <label>
+        <input type="checkbox" id="ledToggle" onchange="toggleLED()" />
+        LED Override
+    </label>
+    <br/>
+    <input type="range" id="fanRange" min="0" max="255" onchange="setAnalogOutput()" />
+</body>
+</html>
